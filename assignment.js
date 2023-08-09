@@ -108,6 +108,7 @@
 // ................ My code is here ................
 // function sortMaker(arr) {
 //     let [array1, array2] = arr;
+
 //     if (!Array.isArray(arr) || arr.length !== 2) {
 //         return "Please provide a valid array";
 //     }
@@ -131,17 +132,28 @@
 //                 maxToSmaller.push(array2, array1);
 //                 return maxToSmaller;
 //             }
+
+
+//             // if (array1 > array2) {
+//             //     const maxToSmaller = `${array1}, ${array2}`;
+//             //     return maxToSmaller;
+//             // }
+//             // else {
+//             //     const maxToSmaller = `${array2}, ${array1}`;
+//             //     return maxToSmaller;
+//             // }
+
 //         }
 //     }
 // }
 
-// // Example usage
+// Example usage
 // console.log(sortMaker([8]));    // Outputs: [3, 8]
 // console.log(sortMaker([10, "abc"]));// Outputs: "Invalid"
 // console.log(sortMaker([5, 5]));    // Outputs: "equal"
 // console.log(sortMaker([-2, 9]));   // Outputs: "Invalid"
 // console.log(sortMaker([3, 7]));    // Outputs: [3, 7]
-// console.log(sortMaker([8, 3])); 
+// console.log(sortMaker([8, 3]));    // Outputs: [3, 8]
 
 // ................ my code ends here ................
 
