@@ -182,45 +182,104 @@
 
 // =================================================================
 
-function findAddress(inputObject) {
-    if (typeof inputObject !== 'object' || inputObject === null) {
-        return "Invalid input"; // Return "Invalid input" for incorrect input
-    }
+// function findAddress(inputObject) {
+//     if (typeof inputObject !== 'object' || inputObject === null) {
+//         return "Invalid input"; // Return "Invalid input" for incorrect input
+//     }
 
-    const { name, street, city, country } = inputObject;
-    if (!name || !street || !city || !country) {
-        // Create a formatted address with missing parts replaced by double underscores
-        const formattedAddress = [
-        name || "__",
-        street || "__",
-        city || "__",
-        country || "__"
-        ].join(", ");
+//     const { name, street, city, country } = inputObject;
+//     if (!name || !street || !city || !country) {
+//         // Create a formatted address with missing parts replaced by double underscores
+//         const formattedAddress = [
+//         name || "__",
+//         street || "__",
+//         city || "__",
+//         country || "__"
+//         ].join(", ");
 
-        return formattedAddress;
-    }
+//         return formattedAddress;
+//     }
 
-    // Create a formatted address with all parts present
-    const formattedAddress = `${name}, ${street}, ${city}, ${country}`;
-    return formattedAddress;
-}
+//     // Create a formatted address with all parts present
+//     const formattedAddress = `${name}, ${street}, ${city}, ${country}`;
+//     return formattedAddress;
+// }
 
-// Example usage
-const address1 = {
-name: "John Doe",
-street: "123 Main St",
-city: "Anytown",
-country: "Countryland"
-};
-console.log(findAddress(address1)); // Outputs: "John Doe, 123 Main St, Anytown, Countryland"
+// // Example usage
+// const address1 = {
+// name: "John Doe",
+// street: "123 Main St",
+// city: "Anytown",
+// country: "Countryland"
+// };
+// console.log(findAddress(address1)); // Outputs: "John Doe, 123 Main St, Anytown, Countryland"
 
-const address2 = {
-name: "Jane Smith",
-street: "456 Elm St",
-city: "Cityville"
-};
-console.log(findAddress(address2)); // Outputs: "Jane Smith, 456 Elm St, Cityville, __"
+// const address2 = {
+// name: "Jane Smith",
+// street: "456 Elm St",
+// city: "Cityville"
+// };
+// console.log(findAddress(address2)); // Outputs: "Jane Smith, 456 Elm St, Cityville, __"
 
-const invalidInput = "This is not an object";
-console.log(findAddress(invalidInput)); // Outputs: "Invalid input"
+// const invalidInput = "This is not an object";
+// console.log(findAddress(invalidInput)); // Outputs: "Invalid input"
   
+
+
+// =================================================================
+
+
+// function canPay(notesArray, chipPrice) {
+//     if (!Array.isArray(notesArray) || notesArray.length === 0 ) {
+//         return "Please provide a money array"; // Return "empty array" for invalid input
+//     }
+
+//     const retailAmount = notesArray.reduce((total, note) => total + note, 0);
+
+//     return retailAmount >= chipPrice;
+// }
+
+// // Example usage
+// const notes = [1, 2, 5];
+// const chipPrice = 10;
+// console.log(canPay(notes, chipPrice)); // Outputs: true (1 + 2 + 5 = 8, which is equal to or greater than 7)
+
+// const insufficientNotes = [2, 3];
+// const expensiveChipPrice = 10;
+// console.log(canPay(insufficientNotes, expensiveChipPrice)); // Outputs: false (2 + 3 = 5, which is less than 10)
+
+// const emptyArray = [];
+// const someChipPrice = 5;
+// console.log(canPay(emptyArray, someChipPrice)); // Outputs: "empty array"
+
+
+
+// function canPay(changeArray, totalDue) {
+//     if (!Array.isArray(changeArray) || changeArray.length === 0 || typeof totalDue !== 'number') {
+//         return "Please give me cost of products.";
+//     }
+
+//     else {
+//         let sum = 0;
+//         for (let i = 0; i < changeArray.length; i++) {
+//             const element = changeArray[i];
+//             sum = sum + element;
+//         }
+
+//         if (sum >= totalDue) {
+//             return true;
+//         }
+
+//         if (sum < totalDue) {
+//             return false;
+//         }
+//     }
+// }
+
+// const amountCount = [1, 8, 2];
+// const amountCount = [1, 1, 2];
+// const chipPrice = 10;
+// const amountCount = "Sum"; 
+// const amountCount = []; 
+// const chipPrice = '10';
+// console.log(canPay(amountCount, chipPrice));

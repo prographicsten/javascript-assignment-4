@@ -22,7 +22,7 @@
 
 
 // function matchFinder(string1, string2) {
-//     if (typeof string1 !== 'string') {
+//     if (typeof string1 !== 'string' || typeof string2 !== 'string') {
 //         return "Please enter a string sentences.";
 //     }
 //     else {
@@ -146,3 +146,32 @@
 
 
 
+// function canPay(changeArray, totalDue) {
+//     if (!Array.isArray(changeArray) || changeArray.length === 0 || typeof totalDue !== 'number') {
+//         return "Please give me cost of products.";
+//     }
+
+//     else {
+//         let sum = 0;
+//         for (let i = 0; i < changeArray.length; i++) {
+//             const element = changeArray[i];
+//             sum = sum + element;
+//         }
+
+//         if (sum >= totalDue) {
+//             return true;
+//         }
+
+//         if (sum < totalDue) {
+//             return false;
+//         }
+//     }
+// }
+
+// const amountCount = [1, 8, 2];
+// const amountCount = [1, 1, 2];
+// const chipPrice = 10;
+// const amountCount = "Sum"; 
+// const amountCount = []; 
+// const chipPrice = '10';
+// console.log(canPay(amountCount, chipPrice));
