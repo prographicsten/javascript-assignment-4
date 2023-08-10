@@ -139,28 +139,28 @@ function sortMaker(array)  {
 
 
 function sortMaker2 (arr)  {
-    // const [array1, array2] = array;
+    const [array1, array2] = arr;
     if (!Array.isArray(arr) || arr.length !== 2) {
         return "Please past a valid array";
     }
     else {
-        if (typeof arr[0] === 'string' || typeof arr[1] === 'string') {
+        if (typeof array1 === 'string' || typeof array2 === 'string') {
             return "Please past an array not acceptable string";
         }
-        else if (arr[0] === arr[1]) {
+        else if (array1 === array2) {
             return "Awesome, equal this number";
         }
-        else if (arr[0] < 0 || arr[1] < 0) {
+        else if (array1 < 0 || array2 < 0) {
             return "Invalid number";
         }
-        else if (arr[0] > 0 && arr[1] > 0) {
+        else if (array1 > 0 && array2 > 0) {
             const store = [];
-            if (arr[0] > arr[1]) {
-                store.push(arr[0], arr[1]);
+            if (array1 > array2) {
+                store.push(array1, array2);
                 return store;
             }
             else {
-                store.push(arr[1], arr[0]);
+                store.push(array2, array1);
                 return store;
             }
         }
@@ -174,3 +174,46 @@ function sortMaker2 (arr)  {
 // console.log(sortMaker2([-2, 9]));     // Outputs: "Invalid"
 // console.log(sortMaker2([3, 17]));     // Outputs: [3, 7]
 // console.log(sortMaker2([13, 5]));     // Outputs: [3, 8]
+
+
+/*
+ * find address array funding code or rules
+ */
+
+function findAddress (address) {
+    if (typeof address !== 'object' || address.length === 0 || address === null) {
+        return "Please select a valid address objects.";
+    };
+
+    const {street, house, society} = address;
+    if (!street || !house || !society) {
+        const infoAddress = [
+            street || "__",
+            house || "__",
+            society || "__"
+        ].join(" , ");
+        return infoAddress;
+    };
+    const infoAddress = `${street}, ${house}, ${society}`;
+    return infoAddress;
+};
+
+// const getAddress1 = {
+//     street: 10,
+//     house: "15A",
+//     society: "Amaging Societies"
+// }
+// console.log(findAddress(getAddress1));
+
+// const getAddress2 = {
+//     street: 11,
+//     society: "Amaging Societies"
+// };
+// console.log(findAddress(getAddress2));
+
+// const getAddress3 = {
+//     street: 12
+// };
+// console.log(findAddress(getAddress3));
+
+
