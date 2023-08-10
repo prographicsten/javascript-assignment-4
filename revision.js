@@ -177,7 +177,7 @@ function sortMaker2 (arr)  {
 
 
 /*
- * find address array funding code or rules
+ * find address funding code or rules
  */
 
 function findAddress (address) {
@@ -218,5 +218,42 @@ function findAddress (address) {
 
 
 /*
- * find address array funding code or rules
+ * ticket price counting code or rules
+ 1. if ticket numbers is less than 100, per ticket price: 100
+ 2. if ticket numbers is more than 100, but less than 200. First 100 tickets will be 100/ticket price rest tickets will be 90 taka per piece.
+ 3. if you purchase more tickets than 200 tickets
+ first 100--> 100tk
+ 101-200--> 90tk
+ 200+ --> 70tk
  */
+
+
+function ticketPrice(ticketQuantity) {
+    const ticketStartPrice = 100;
+    const ticketDiscountPrice = 90;
+    const ticketLastDiscountPrice = 70;
+
+    if (ticketQuantity <= 100) {
+        const firstTicketPrice = ticketQuantity * ticketStartPrice;
+        return firstTicketPrice;
+    }
+    else if (ticketQuantity <= 200) {
+        const firstTicketPrice = 100 * ticketStartPrice;
+        const secondPriceCounting = ticketQuantity - 100;
+        const secondTicketPriceAmount = secondPriceCounting * ticketDiscountPrice;
+        const secondTotalPrice = firstTicketPrice + secondTicketPriceAmount;
+        return secondTotalPrice;
+    }
+    else {
+        const firstNormalPrice = 100 * ticketStartPrice;
+        const secondNormalPrice = 100 * ticketDiscountPrice;
+        const finalTicketDiscount = ticketQuantity - 200;
+        const finalResult = finalTicketDiscount * ticketLastDiscountPrice;
+        const finalTicketPrice = firstNormalPrice + secondNormalPrice + finalResult;
+        return finalTicketPrice;
+    }
+};
+
+// console.log(ticketPrice(10));
+// console.log(ticketPrice(101));
+// console.log(ticketPrice(201));
