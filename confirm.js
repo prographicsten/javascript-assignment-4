@@ -81,7 +81,7 @@ function sortMaker(arr) {
 // console.log(sortMaker([8]));    // Outputs: [3, 8]
 // console.log(sortMaker([10, "abc"]));// Outputs: "Invalid"
 // console.log(sortMaker([5, 5]));    // Outputs: "equal"
-// console.log(sortMaker([-2, 9]));   // Outputs: "Invalid"
+console.log(sortMaker([-2, 9]));   // Outputs: "Invalid"
 // console.log(sortMaker([3, 17]));    // Outputs: [3, 7]
 // console.log(sortMaker([3, 13]));    // Outputs: [3, 8]
 

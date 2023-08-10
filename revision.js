@@ -99,5 +99,78 @@ const sentString2 = 'Khushi';
 
 
 /*
- * match string funding code or rules
+ * sortMaker array funding code or rules
  */
+
+function sortMaker(array)  {
+    // const [array1, array2] = array;
+    if (!Array.isArray(array) || array.length !== 2) {
+        return "Please past a valid array";
+    }
+    else {
+        if (typeof array[0] === 'string' || typeof array[1] === 'string') {
+            return "Please past an array not acceptable string";
+        }
+        else if (array[0] === array[1]) {
+            return "Awesome, equal this number";
+        }
+        else if (array[0] < 0 || array[1] < 0) {
+            return "Invalid number";
+        }
+        else if (array[0] > 0 && array[1] > 0) {
+            if (array[0] > array[1]) {
+                return `${array[0]}, ${array[1]}`;
+            }
+            else {
+                return `${array[1]}, ${array[0]}`;
+            }
+        }
+    }
+};
+
+// Example usage
+// console.log(sortMaker([8]));         // invalid array
+// console.log(sortMaker([10, "abc"])); // Outputs: "Invalid"
+// console.log(sortMaker([5, 5]));      // Outputs: "equal"
+// console.log(sortMaker([-2, 9]));     // Outputs: "Invalid"
+// console.log(sortMaker([3, 17]));     // Outputs: [3, 7]
+// console.log(sortMaker([13, 5]));     // Outputs: [3, 8]
+
+
+
+function sortMaker2 (arr)  {
+    // const [array1, array2] = array;
+    if (!Array.isArray(arr) || arr.length !== 2) {
+        return "Please past a valid array";
+    }
+    else {
+        if (typeof arr[0] === 'string' || typeof arr[1] === 'string') {
+            return "Please past an array not acceptable string";
+        }
+        else if (arr[0] === arr[1]) {
+            return "Awesome, equal this number";
+        }
+        else if (arr[0] < 0 || arr[1] < 0) {
+            return "Invalid number";
+        }
+        else if (arr[0] > 0 && arr[1] > 0) {
+            const store = [];
+            if (arr[0] > arr[1]) {
+                store.push(arr[0], arr[1]);
+                return store;
+            }
+            else {
+                store.push(arr[1], arr[0]);
+                return store;
+            }
+        }
+    }
+};
+
+// Example usage
+// console.log(sortMaker2([8]));         // invalid array
+// console.log(sortMaker2([10, "abc"])); // Outputs: "Invalid"
+// console.log(sortMaker2([5, 5]));      // Outputs: "equal"
+// console.log(sortMaker2([-2, 9]));     // Outputs: "Invalid"
+// console.log(sortMaker2([3, 17]));     // Outputs: [3, 7]
+// console.log(sortMaker2([13, 5]));     // Outputs: [3, 8]
