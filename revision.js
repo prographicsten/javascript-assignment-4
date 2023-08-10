@@ -217,3 +217,6 @@ function findAddress (address) {
 // console.log(findAddress(getAddress3));
 
 
+/*
+ * find address array funding code or rules
+ */
