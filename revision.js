@@ -257,3 +257,8 @@ function ticketPrice(ticketQuantity) {
 // console.log(ticketPrice(10));
 // console.log(ticketPrice(101));
 // console.log(ticketPrice(201));
+
+
+/*
+ * find address funding code or rules
+ */
